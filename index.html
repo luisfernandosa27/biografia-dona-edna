@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Biografia Dona Edna — Memorial</title>
+  <meta name="description" content="Memorial dedicado à vida e à obra de Edna Pinto Sampaio (Dona Edna)." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <strong>Biografia Dona Edna</strong>
+        <span>Memorial de Edna Pinto Sampaio</span>
+      </div>
+      <nav class="menu">
+        <a class="active" href="index.html">Início</a>
+        <a href="biografia.html">Biografia</a>
+        <a href="obras.html">Obras</a>
+        <a href="frases.html">Frases</a>
+        <a href="memorias.html">Memórias</a>
+        <a href="legado.html">Legado</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <section class="card hero-inner">
+      <div class="hero-copy">
+        <div class="kicker">Memorial público</div>
+        <h1>Edna Pinto Sampaio<br/>("Dona Edna")</h1>
+        <p class="lead">
+          Este site é um memorial dedicado à vida, à arte e ao legado de Dona Edna —
+          mulher brasileira, mãe, avó, mentora e artista que deixou um patrimônio afetivo e cultural para sua família e para quem se conecta com sua obra.
+        </p>
+
+        <div class="quote">
+          “Aqui entra uma frase marcante dela — ou uma frase da família que a represente.”
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="biografia.html">Ler biografia</a>
+          <a class="btn" href="obras.html">Ver obras</a>
+          <a class="btn" href="memorias.html">Registrar memórias</a>
+        </div>
+
+        <p class="muted" style="margin-top:14px;">
+          Dica: coloque a imagem de capa em <code>images/obras/capa.jpg</code>.
+        </p>
+      </div>
+
+      <div class="hero-media" aria-label="Imagem de capa">
+        <div class="hero-caption">
+          Capa: título da obra (técnica, dimensões, ano aproximado).
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="container section">
+    <div class="grid">
+      <div class="card tile">
+        <h3>Quem foi Dona Edna</h3>
+        <p>Uma biografia organizada para preservar fatos, afetos e contexto.</p>
+      </div>
+      <div class="card tile">
+        <h3>Acervo de obras</h3>
+        <p>Galeria com título, técnica, dimensões e texto cultural por obra.</p>
+      </div>
+      <div class="card tile">
+        <h3>Memórias e frases</h3>
+        <p>Depoimentos de família e a sabedoria cotidiana que ela deixou.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container row">
+      <div>© <span id="y"></span> Biografia Dona Edna — Memorial</div>
+      <div>Contato (opcional): <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
