@@ -1,68 +1,271 @@
-<!doctype html>
-<html lang="pt-br">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Memórias — Dona Edna</title>
-  <meta name="description" content="Depoimentos e histórias sobre Dona Edna." />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <div class="brand">
-        <strong>Biografia Dona Edna</strong>
-        <span>Memorial de Edna Pinto Sampaio</span>
-      </div>
-      <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="biografia.html">Biografia</a>
-        <a href="obras.html">Obras</a>
-        <a href="frases.html">Frases</a>
-        <a class="active" href="memorias.html">Memórias</a>
-        <a href="legado.html">Legado</a>
-      </nav>
-    </div>
-  </header>
+:root{
+  --bg: #fbf7f0;
+  --paper: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #5b5b5b;
+  --line: #e7dfd3;
+  --accent: #2f5d50; /* verde musgo */
+  --accent2: #8a4b2a; /* terracota */
+  --shadow: 0 10px 30px rgba(0,0,0,.06);
+  --radius: 16px;
+  --max: 1000px;
+}
 
-  <main class="container page">
-    <div class="page-header">
-      <h1>Memórias</h1>
-      <p>Histórias, cenas do cotidiano, bazar, jogos de buraco, conselhos e afeto.</p>
-    </div>
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--ink);
+  background: radial-gradient(1000px 600px at 20% 0%, rgba(47,93,80,.08), transparent 55%),
+              radial-gradient(900px 500px at 80% 10%, rgba(138,75,42,.08), transparent 55%),
+              var(--bg);
+  line-height: 1.6;
+}
 
-    <section class="card content">
-      <div class="list">
-        <div class="item">
-          <strong>Jogo de buraco</strong>
-          <span>“Aqui entra um parágrafo com a memória — quem estava, onde era, o clima, o que ela fazia.”</span>
-        </div>
-        <div class="item">
-          <strong>O bazar de fim de ano</strong>
-          <span>“Memória sobre como unia as pessoas, a organização, o carinho, as peças.”</span>
-        </div>
-        <div class="item">
-          <strong>Um ensinamento inesquecível</strong>
-          <span>“Uma história curta que vira lição.”</span>
-        </div>
-      </div>
+a{ color: var(--accent); text-decoration: none; }
+a:hover{ text-decoration: underline; }
 
-      <hr class="sep"/>
+.container{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+}
 
-      <p class="muted">
-        Importante: este site é estático; para receber depoimentos automaticamente, o caminho mais simples é
-        você coletar por WhatsApp/Google Forms e depois eu organizo e publico aqui.
-      </p>
-    </section>
-  </main>
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(251,247,240,.75);
+  border-bottom: 1px solid var(--line);
+}
 
-  <footer class="footer">
-    <div class="container row">
-      <div>© <span id="y"></span> Biografia Dona Edna — Memorial</div>
-      <div><a href="legado.html">Ver legado →</a></div>
-    </div>
-  </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
-</body>
-</html>
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 16px;
+}
 
+.brand{
+  display:flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.brand strong{
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  letter-spacing:.2px;
+  font-size: 18px;
+}
+.brand span{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.menu{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content:flex-end;
+}
+.menu a{
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--ink);
+}
+.menu a.active, .menu a:hover{
+  background: rgba(47,93,80,.10);
+  text-decoration:none;
+}
+
+.hero{
+  padding: 42px 0 26px;
+}
+.card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow:hidden;
+}
+
+.hero-inner{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 0;
+}
+.hero-copy{
+  padding: 28px;
+}
+.kicker{
+  color: var(--accent2);
+  font-weight: 600;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+h1{
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-size: 38px;
+  line-height: 1.15;
+  margin: 10px 0 10px;
+}
+.lead{
+  color: var(--muted);
+  font-size: 16px;
+  margin: 0 0 18px;
+}
+.cta-row{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.btn{
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+}
+.btn.primary{
+  border-color: transparent;
+  background: var(--accent);
+  color: #fff;
+}
+.btn:hover{ text-decoration:none; filter: brightness(0.98); }
+
+.hero-media{
+  border-left: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(47,93,80,.12), rgba(138,75,42,.10)),
+    url("../images/obras/capa.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 280px;
+  display:flex;
+  align-items:end;
+}
+.hero-caption{
+  width: 100%;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.45));
+  color: #fff;
+  font-size: 13px;
+}
+
+.section{
+  padding: 18px 0 34px;
+}
+.section h2{
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+.muted{ color: var(--muted); }
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.tile{
+  padding: 16px;
+}
+.tile h3{
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.tile p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.quote{
+  padding: 18px 18px;
+  border-left: 4px solid var(--accent);
+  background: rgba(47,93,80,.06);
+  border-radius: 14px;
+  color: var(--ink);
+}
+
+.page{
+  padding: 26px 0 40px;
+}
+.page-header{
+  margin-bottom: 14px;
+}
+.page-header h1{
+  font-size: 34px;
+  margin: 0 0 6px;
+}
+.page-header p{ margin:0; color: var(--muted); }
+
+.content{
+  padding: 22px;
+}
+hr.sep{
+  border:0;
+  border-top: 1px solid var(--line);
+  margin: 18px 0;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.figure{
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow:hidden;
+  background:#fff;
+}
+.figure img{
+  width:100%;
+  height: 180px;
+  object-fit: cover;
+  display:block;
+}
+.figure figcaption{
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.list{
+  display:grid;
+  gap: 10px;
+}
+.list .item{
+  padding: 14px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background:#fff;
+}
+.item strong{ display:block; margin-bottom: 4px; }
+.item span{ color: var(--muted); }
+
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 18px 0 26px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer .row{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items:center;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .hero-media{ border-left: 0; border-top: 1px solid var(--line); }
+  .grid{ grid-template-columns: 1fr; }
+  .gallery{ grid-template-columns: 1fr; }
+}
