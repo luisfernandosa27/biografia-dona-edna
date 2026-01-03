@@ -1,1 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Obras — Dona Edna</title>
+  <meta name="description" content="Acervo de obras de Dona Edna (Edna Pinto Sampaio)." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <strong>Biografia Dona Edna</strong>
+        <span>Memorial de Edna Pinto Sampaio</span>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="biografia.html">Biografia</a>
+        <a class="active" href="obras.html">Obras</a>
+        <a href="frases.html">Frases</a>
+        <a href="memorias.html">Memórias</a>
+        <a href="legado.html">Legado</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="page-header">
+      <h1>Obras</h1>
+      <p>Galeria do acervo. Para cada obra: título, técnica, dimensões e um texto cultural curto.</p>
+    </div>
+
+    <section class="card content">
+      <p class="muted">
+        Coloque as imagens em <code>images/obras/</code> e atualize os nomes abaixo.
+      </p>
+
+      <div class="gallery">
+        <figure class="figure">
+          <img src="images/obras/obra-01.jpg" alt="Obra 01" />
+          <figcaption><strong>Título da Obra 01</strong> — técnica · dimensões · ano</figcaption>
+        </figure>
+
+        <figure class="figure">
+          <img src="images/obras/obra-02.jpg" alt="Obra 02" />
+          <figcaption><strong>Título da Obra 02</strong> — técnica · dimensões · ano</figcaption>
+        </figure>
+
+        <figure class="figure">
+          <img src="images/obras/obra-03.jpg" alt="Obra 03" />
+          <figcaption><strong>Título da Obra 03</strong> — técnica · dimensões · ano</figcaption>
+        </figure>
+      </div>
+
+      <hr class="sep"/>
+
+      <h2>Fichas (modelo)</h2>
+      <div class="list">
+        <div class="item">
+          <strong>Título:</strong> (ex: “Sem título (Flores)”)
+          <span><br/>Técnica: (ex: acrílica sobre tela) · Dimensões: (ex: 50×70 cm) · Ano: (aprox.)</span>
+          <span><br/>Texto cultural: 3–5 linhas sobre a atmosfera, tema, contexto, memória.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container row">
+      <div>© <span id="y"></span> Biografia Dona Edna — Memorial</div>
+      <div><a href="frases.html">Ver frases →</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
 
